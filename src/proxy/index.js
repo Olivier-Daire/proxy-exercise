@@ -1,4 +1,9 @@
-const { proxy: proxyConfig, dummyServer } = require('../config');
+const {
+  proxy: proxyConfig,
+  jwt: jwtConfig,
+  dummyServer,
+} = require('../config');
+const jwt = require('express-jwt');
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
@@ -11,6 +16,7 @@ app.all(
     changeOrigin: true,
   }),
 );
+app.use(jwt({ secret: jwtConfig.secret, algorithms: jwtConfig.algorithms }));
 
 /**
  * Setup Proxy server

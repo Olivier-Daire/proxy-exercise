@@ -1,8 +1,17 @@
 const { dummyServer } = require('../../config');
+// const { StatusCodes } = require('http-status-codes');
+
 const superagent = require('superagent');
 
 async function forwardRequest(req, res) {
   // TODO check auth
+  console.log(req);
+  const isAdmin = req.user.is_admin;
+  console.log(isAdmin);
+  // if (!isAdmin) {
+  //   res.sendStatus(StatusCodes.FORBIDDEN);
+  // }
+
   // TODO add new token
 
   const originalUrl = req.originalUrl;

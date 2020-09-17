@@ -6,4 +6,8 @@ module.exports = {
     host: 'http://localhost',
     port: 3999,
   },
+  jwt: {
+    secret: 'dummy-secret', // should be an env var
+    algorithms: ['HS256'],
+  },
 };
