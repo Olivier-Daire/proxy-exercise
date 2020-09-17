@@ -1,6 +1,6 @@
 # proxy exercise
 
-The goal of this exercise is to see if you're confortable with JavaScript and/or TypeScript and are used to writing functional, well **tested** and **documented** API endpoints and are confortable with taking design .
+The goal of this exercise is to see if you're confortable with JavaScript and/or TypeScript and are used to writing functional, well **tested** and **documented** API endpoints and are confortable with bootstraping a project and taking architecture decisions.
 
 We'll be working on a proxy which will be the entry point to our back-end infra (a dummy server in our case). It will be responsible to check auth tokens, insert different auth tokens before forwarding the request to our back-end server.
 We want to keep audit logs of all the requests going through the proxy. We'll use sqlite in this exercise as it requires no setup to store the proxy's logs.
